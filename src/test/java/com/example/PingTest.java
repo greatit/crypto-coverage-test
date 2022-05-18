@@ -160,12 +160,12 @@ public class PingTest {
     outProps.put("encryptionParts",
         "{Element}{http://ping.test.invalid}param1;{Element}{http://ping.test.invalid}param2");
     // add outbound encryption and signing policy
-    ClientProxy.getClient(pingSingleCoveragePort).getOutInterceptors()
+    ClientProxy.getClient(pingDualCoveragePort).getOutInterceptors()
         .add(new WSS4JOutInterceptor(outProps));
 
     // evaluate response
     assertDoesNotThrow(() -> {
-      RspType response = pingSingleCoveragePort.ping(request);
+      RspType response = pingDualCoveragePort.ping(request);
       assertEquals(request.getParam0(), response.getParam0());
       assertEquals(request.getParam1(), response.getParam1());
       assertEquals(request.getParam2(), response.getParam2());
