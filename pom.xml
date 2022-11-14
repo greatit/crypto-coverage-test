@@ -19,7 +19,7 @@
     <junit-dependency.version>5.8.2</junit-dependency.version>
     <oracle-dependency.version>12.2.0.1</oracle-dependency.version>
     <slf4j-dependency.version>1.7.36</slf4j-dependency.version>
-    <spring-dependency.version>4.1.6.RELEASE</spring-dependency.version>
+    <spring-dependency.version>4.2.7.RELEASE</spring-dependency.version>
   </properties>
 
   <dependencies>
